@@ -1,4 +1,5 @@
-const path = require('path');
+const path = require('path');  
+ 
 const mainController =
 {
     home: (req,res) =>
@@ -9,8 +10,6 @@ const mainController =
     {
         res.sendFile(path.resolve(__dirname, "../views/about.html"))
     }
-
-
 }
 
 module.exports = mainController;
