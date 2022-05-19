@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,28 @@
     <title>Productos EJS</title>
 
 </head>
+
 <body>
     <h1>Productos EJS</h1>
+    <p>Hobbies</p>
+    <% for (let i=1; i<=10; i++){%>
+        <div>
+            <label for="" name="nombre">Nombre <%=i%> </label>
+            <input type="text" name="hobbies[]">
+        </div>
+        <% }%>
+        <br>
+        <div> 
+            <p>Personas</p>
+            <% for (let person of personas ){ %>
+                <li>
+                    Hola , soy <%= person.nombre + " "  + person.apellido%>
+                </li>
+
+            <%}%>
+        </div>
+
+
 </body>
+
 </html>
