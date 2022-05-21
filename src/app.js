@@ -15,8 +15,10 @@ const path = require('path');
 //ejs template in node js 
 //instalar paquete npm install ejs 
 //referencia
-app.set('views',path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
+
+app.set('views',path.resolve(__dirname, 'views'));
+
 
 
 // requerir archivos de rutas.
@@ -35,5 +37,6 @@ app.listen(3000, () => {
 
 //mapeo de rutas
 app.use('/', mainRouter);
+app.use('/menu/:id', mainRouter);
 app.use('/productos', productosRouter);
 app.use('/productosejs', productosEjsRouter);

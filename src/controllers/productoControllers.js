@@ -10,6 +10,7 @@ const productoController =
 
     detalle: (req, res) => 
     {
+        
         res.sendFile(path.resolve(__dirname, "../views/productos_detalle.html"))
     }
 }
